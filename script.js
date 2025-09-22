@@ -33,7 +33,7 @@ onAuthStateChanged(auth, async (user) => {
     if (!userDoc.exists()) {
         const defaultUsername = user.email.split("@")[0];
         await setDoc(userRef, { username: defaultUsername, bio: "", email: user.email, bookmarks: []});
-        username = user.email.split("@")[0];
+        username = defaultUsername;
     } 
     else{
         username = userDoc.data().username;
@@ -249,6 +249,7 @@ function toggleBookmark(postId, Btn){
         });
     })
 }
+
 
 
 
