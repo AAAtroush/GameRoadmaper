@@ -31,7 +31,7 @@ onAuthStateChanged(auth, async (user) => {
 
     if (!userDoc.exists()) {
         const defaultUsername = user.email.split("@")[0];
-        await setDoc(userRef, { username: defaultUsername, bio: "", email: user.email });
+        await setDoc(userRef, { username: defaultUsername, bio: "", email: user.email, bookmarks: [] });
     } 
     userDisplay.textContent = userDoc.data().username;
     const logoutBtn = document.createElement("button");
@@ -244,6 +244,7 @@ function toggleBookmark(postId, Btn){
         });
     })
 }
+
 
 
 
