@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bookmarks - GameRoadmaper</title>
+  <link rel="stylesheet" href="bookmarks.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" class="searchbar" placeholder="Search..." />
+            
+        </div>
+    </header>
+    
+    <div id="userDisplay" style="position:absolute; top:10px; right:10px;"></div>
+    
+    <div id="mainPage" style="position:absolute; top:15px; left:10px; ">
+        <button id = "home">GameRoadmaper</button>
+    </div>
+
+    <!-- Left sidebar -->
+    <div id="left">
+        <button class="card" id = "homeBtn">Home</button>
+        <button class="card" id = "bookmarksBtn">Bookmarks</button>
+        <button class="card" id = "profileBtn">Profile</button>
+        <button class="card">Notifications</button>
+    </div>
+
+    <!-- Main feed -->
+    <div id="feed"> 
+        <div id="main">
+            <h1>There is no bookmarks yet</h1>
+        </div>
+    </div>
+    <script type="module" src="bookmarks.js"></script>
+</body>
+</html>

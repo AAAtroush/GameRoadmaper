@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GameRoadmaper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" class="searchbar" placeholder="Search..." />
+            
+        </div>
+    </header>
+    
+    <div id="userDisplay" style="position:absolute; top:10px; right:10px;"></div>
+    
+    <div id="mainPage" style="position:absolute; top:15px; left:10px; ">
+        <button id = "home">GameRoadmaper</button>
+    </div>
+
+    <div id="left">
+        <button class="card" id = "homeBtn">Home</button>
+        <button class="card" id = "bookmarksBtn">Bookmarks</button>
+        <button class="card" id = "profileBtn">Profile</button>
+        <button class="card">Notifications</button>
+    </div>
+
+    <div id="feed">
+        <button id="reportBtn" class="floatingBtn">Report Finding</button>
+        <div id="reportDiv" class="reportDiv">
+            <div class="reportDivContent">
+                <span id="closeReportDiv" class="close">&times;</span>
+                <h2>Report Finding</h2>
+                <form id="reportForm">
+                <input type="text" id="titleInput" placeholder="Title" required><br><br>
+                <textarea id="descInput" placeholder="Description" required></textarea><br><br>
+                <input type="text" id="gameInput" placeholder="Game" required><br><br>
+                <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    
+        <div id="main">
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Profile - GameRoadmaper</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <header>
+    <div class="search-container">
+        <input type="text" class="searchbar" placeholder="Search..." />
+    </div>
+  </header>
+
+  <div id="mainPage" style="position:absolute; top:15px; left:10px; ">
+        <button id = "home">GameRoadmaper</button>
+    </div>
+
+  <div id="left">
+    <button class="card" id = "homeBtn">Home</button>
+    <button class="card" id = "bookmarksBtn">Bookmarks</button>
+    <button class="card" id = "profileBtn">Profile</button>
+    <button class="card">Notifications</button>
+  </div>
+
+  <div id="feed">
+    <div id="profileHeader">
+      <h2 id="username">Username</h2>
+      <p id="bio">This is your bio...</p>
+      <button id="editProfileBtn">Edit Profile</button>
+    </div>
+
+    <div id="userPosts">
+      <h3>Your Posts</h3>
+      <div id="postsList"></div>
+    </div>
+
+    <div id="editProfileModal" class="reportDiv">
+      <div class="reportDivContent">
+        <span id="closeEditProfile" class="close">&times;</span>
+        <h2>Edit Profile</h2>
+        <form id="editProfileForm">
+          <input type="text" id="newUsername" placeholder="New Username"><br><br>
+          <input type="text" id="newBio" placeholder="New Bio"><br><br>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="profile.js"></script>
+</body>
+</html>
