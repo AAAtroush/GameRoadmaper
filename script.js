@@ -29,11 +29,16 @@ onAuthStateChanged(auth, async (user) => {
     const userRef = doc(db, "users", user.uid);
     const userDoc = await getDoc(userRef);
 
+    let username;
     if (!userDoc.exists()) {
         const defaultUsername = user.email.split("@")[0];
-        await setDoc(userRef, { username: defaultUsername, bio: "", email: user.email, bookmarks: [] });
+        await setDoc(userRef, { username: defaultUsername, bio: "", email: user.email, bookmarks: []});
+        username = user.email.split("@")[0];
     } 
-    userDisplay.textContent = userDoc.data().username;
+    else{
+        username = userDoc.data().username;
+    }
+    userDisplay.textContent = username;
     const logoutBtn = document.createElement("button");
     logoutBtn.textContent = "Logout";
     logoutBtn.style.marginLeft = "10px";
@@ -244,6 +249,7 @@ function toggleBookmark(postId, Btn){
         });
     })
 }
+
 
 
 
